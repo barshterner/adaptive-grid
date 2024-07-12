@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 4fr 1fr;
+    grid-template-areas: "header header header" "aside article ad" "aside footer footer";
+}
+header{
+    grid-area: header;
+    background-image:url(https://i.ytimg.com/vi/56MLoWSJLCs/maxresdefault.jpg) ;
+    height: 300px;
+    padding: 10px;
+    background-size: cover;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+aside.sidebar{
+    grid-area: aside;
+    background-color: #4682B4;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+}
+article{
+    background-color: #1E90FF;
+    height: 400px;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+}
+aside.ad{
+    grid-area: ad;
+    background-color: #4169E1;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+}
+footer{
+    grid-area: footer;
+    background-color: #00BFFF;
+    height: 92px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    color:white;
+}
+aside.sidebar a{
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+aside.sidebar ul{
+    list-style: none;
+    
+}
+article p{
+    font-size: 20px;
+    padding-top: 10px;
+}
+aside.sidebar li{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+@media(min-width:640px) and (max-width:789px){
+    .grid{
+        grid-template-columns: 2fr 4fr;
+        grid-template-areas:
+            "header header"
+            "aside article"
+            "ad ad"
+            "footer footer" ;
+    }
+}
+@media (max-width:639px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "article"
+        "aside"
+        "ad"
+        "footer";
+    }
+}
